@@ -1,0 +1,219 @@
+Base:
+    model_root: './checkpoints/'
+    verbose: 1
+    patience: 2
+    pickle_feature_encoder: True
+    use_hdf5: True
+    save_best_only: True
+    every_x_epochs: 1
+    debug: False
+    version: 'pytorch'
+
+
+MADD:
+    model: MADD
+    dataset_id: huawei_process_target_items_minet1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 64
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 1
+    shuffle: True
+    seed: 2022
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    seq_agg: True
+    interest_attn: True
+    bi_pooling: True
+    dnn: False
+    domain_agnostic: True
+    domain_pred: True
+    c_domain_pred: True
+
+
+
+
+
+
+
+
+C2DR:
+    model: C2DR
+    dataset_id: huawei_process_target_items_minet1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC','NDCG','GAUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 256
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 1
+    shuffle: True
+    seed: 3400
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    seq_agg: True
+    interest_attn: True
+    bi_pooling: True
+    dnn: True
+    domain_agnostic: True
+    domain_pred: True
+    c_domain_pred: False
+
+
+
+ACDR_base:
+    model: ACDR
+    dataset_id: huawei_process_source_items_mvdnn2
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 64
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 2
+    shuffle: True
+    seed: 2022
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    seq_agg: True
+    interest_attn: True
+    bi_pooling: True
+    dnn: True
+    domain_agnostic: True
+    domain_pred: True
+    c_domain_pred: True
+
+
+
+
+
+CSN_base:
+    model: CSN
+    dataset_id: huawei_process_source_items_mvdnn2
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 64
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 1
+    shuffle: True
+    seed: 219
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    seq_agg: True
+    interest_attn: True
+    bi_pooling: True
+    dnn: True
+    domain_agnostic: True
+    domain_pred: True
+    c_domain_pred: True
+
+
+CoNet_base:
+    model: CoNet
+    dataset_id: huawei_process_source_items_mvdnn2
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 64
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 1
+    shuffle: True
+    seed: 2019
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    seq_agg: True
+    interest_attn: True
+    bi_pooling: True
+    dnn: True
+    domain_agnostic: True
+    domain_pred: True
+    c_domain_pred: True
+
+MiNet_base:
+    model: MiNet
+    dataset_id: huawei_process_source_items_mvdnn2
+    loss: 'binary_crossentropy'
+    metrics: ['logloss','AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-4
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 2000
+    embedding_dim: 64
+    dnn_hidden_units: [512, 128, 64]
+    dnn_activations: relu
+    attention_hidden_units: [64]
+    attention_hidden_activations: "Dice"
+    attention_output_activation: null
+    attention_dropout: 0
+    net_dropout: 0
+    batch_norm: False
+    epochs: 1
+    shuffle: True
+    seed: 1000
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+
+
+

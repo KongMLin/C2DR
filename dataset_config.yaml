@@ -1,0 +1,897 @@
+
+huawei_process_users1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\valid.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,cillabel], dtype: float}
+
+
+huawei_process_source_items1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\valid.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,cillabel], dtype: float}
+
+huawei_process_target_items1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\valid.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,cillabel], dtype: float}
+
+
+
+huawei_process_users2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\all_data.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_users3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\all_data.csv
+    valid_data: D:\Huawei_datasets\train3\valid_ads_data_all.csv
+    test_data: D:\Huawei_datasets\train3\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_source_items:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\all_data.csv
+    valid_data: D:\train\all_data_valid_new_mini.csv
+    test_data: D:\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+
+
+huawei_process_source_items1_beta:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train_ads_data_all_beta.csv
+    valid_data: D:\Huawei_datasets\train1\valid_ads_data_all_beta.csv
+    test_data: D:\Huawei_datasets\train1\test_ads_data_all_beta.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_source_items2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\all_data.csv
+    valid_data: D:\Huawei_datasets\train\all_data_valid_new_mini.csv
+    test_data: D:\Huawei_datasets\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_source_items3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\all_data.csv
+    valid_data: D:\Huawei_datasets\train\all_data_valid_new_mini.csv
+    test_data: D:\Huawei_datasets\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_target_items:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\all_data.csv
+    valid_data: D:\train\valid_ads_data_all.csv
+    test_data: D:\train\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,y_d], dtype: float}
+
+
+
+huawei_process_target_items1_beta:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train_ads_data_all_beta.csv
+    valid_data: D:\Huawei_datasets\train1\valid_ads_data_all_beta.csv
+    test_data: D:\Huawei_datasets\train1\test_ads_data_all_beta.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_target_items2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\all_data.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,y_d], dtype: float}
+
+huawei_process_target_items3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\all_data.csv
+    valid_data: D:\Huawei_datasets\train3\valid_ads_data_all.csv
+    test_data: D:\Huawei_datasets\train3\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,y_d], dtype: float}
+
+
+huawei_process_users_mini:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\all_data_train_new_mini.csv
+    valid_data: D:\train\all_data_valid_new_mini.csv
+    test_data: D:\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,y_d], dtype: float}
+
+
+huawei_process_source_items_mini:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\all_data_train_new_mini.csv
+    valid_data: D:\train\all_data_valid_new_mini.csv
+    test_data: D:\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId,i_entities],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+
+huawei_process_target_items_mini:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\all_data_train_new_mini.csv
+    valid_data: D:\train\all_data_valid_new_mini.csv
+    test_data: D:\train\all_data_test_new_mini.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,y_d], dtype: float}
+
+
+huawei_process_users_minet:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\train_ads_data_all_minet.csv
+    valid_data: D:\train\valid_ads_data_all_minet.csv
+    test_data: D:\train\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+
+huawei_process_users_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+huawei_process_users_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\val.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode,],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,cillabel], dtype: float}
+
+books&movies_process_users_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train.csv
+    valid_data: D:\Book&movies\val.csv
+    test_data: D:\Book&movies\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ user_id,living_place,],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ book_hist, movie_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+books&movies_process_users_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train2\train.csv
+    valid_data: D:\Book&movies\train2\val.csv
+    test_data: D:\Book&movies\train2\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ user_id,living_place,],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ book_hist, movie_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+
+books&movies_process_users_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train3\train.csv
+    valid_data: D:\Book&movies\train3\val.csv
+    test_data: D:\Book&movies\train3\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ user_id,living_place,],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ book_hist, movie_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+
+books&movies_process_target_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train.csv
+    valid_data: D:\Book&movies\val.csv
+    test_data: D:\Book&movies\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ book_id, book_time, book_cate_0, book_cate_1, book_cate_2,
+                   book_cate_3, book_cate_4, book_cate_5, book_cate_6, book_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+books&movies_process_target_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train2\train.csv
+    valid_data: D:\Book&movies\train2\val.csv
+    test_data: D:\Book&movies\train2\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ book_id, book_time, book_cate_0, book_cate_1, book_cate_2,
+                   book_cate_3, book_cate_4, book_cate_5, book_cate_6, book_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+books&movies_process_target_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train3\train.csv
+    valid_data: D:\Book&movies\train3\val.csv
+    test_data: D:\Book&movies\train3\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ book_id, book_time, book_cate_0, book_cate_1, book_cate_2,
+                   book_cate_3, book_cate_4, book_cate_5, book_cate_6, book_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+books&movies_process_source_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train.csv
+    valid_data: D:\Book&movies\val.csv
+    test_data: D:\Book&movies\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ movie_id, movie_time, CategoryID, movie_cate_0, movie_cate_1, movie_cate_2,
+                movie_cate_3, movie_cate_4, movie_cate_5, movie_cate_6, movie_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+books&movies_process_source_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train2\train.csv
+    valid_data: D:\Book&movies\train2\val.csv
+    test_data: D:\Book&movies\train2\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ movie_id, movie_time, CategoryID, movie_cate_0, movie_cate_1, movie_cate_2,
+                movie_cate_3, movie_cate_4, movie_cate_5, movie_cate_6, movie_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+
+books&movies_process_source_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Book&movies\train3\train.csv
+    valid_data: D:\Book&movies\train3\val.csv
+    test_data: D:\Book&movies\train3\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ movie_id, movie_time, CategoryID, movie_cate_0, movie_cate_1, movie_cate_2,
+                movie_cate_3, movie_cate_4, movie_cate_5, movie_cate_6, movie_cate_7],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [book_label,movie_label], dtype: float}
+
+huawei_process_users_mvdnn2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_mvdnn.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+
+huawei_process_users_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train3\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train3\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id, age, gender, residence, city, city_rank,
+                  series_dev, series_group, emui_dev, device_name, device_size,u_phonePrice, u_browserLifeCycle,
+                  u_browserMode, u_feedLifeCycle, u_refreshTimes],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ ad_click_list_v001, ad_click_list_v002, ad_click_list_v003,u_newsCatInterests,
+                    u_newsCatDislike, u_newsCatInterestsST, u_click_ca2_news ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+huawei_process_source_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\val.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,cillabel], dtype: float}
+
+
+huawei_process_source_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+
+
+huawei_process_source_items_mvdnn2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_mvdnn.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+
+huawei_process_source_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train3\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train3\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [ i_regionEntity, i_cat, i_dislikeTimes, i_upTimes, i_dtype],
+           active: True, dtype: float, type: categorical, na_value: 0}
+        - { name: [ i_docId, i_s_sourceId],
+            active: True, dtype: str, type: categorical, na_value: 0 }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+
+huawei_process_target_items_minet:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\train\train_ads_data_all_minet.csv
+    valid_data: D:\train\valid_ads_data_all_minet.csv
+    test_data: D:\train\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,flabel], dtype: float}
+
+huawei_process_target_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,flabel], dtype: float}
+
+
+huawei_process_target_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train1\train.csv
+    valid_data: D:\Huawei_datasets\train1\val.csv
+    test_data: D:\Huawei_datasets\train1\test.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,cillabel], dtype: float}
+
+huawei_process_target_items_mvdnn2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train2\train_ads_data_all_mvdnn.csv
+    valid_data: D:\Huawei_datasets\train2\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train2\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,flabel], dtype: float}
+
+huawei_process_target_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\Huawei_datasets\train3\train_ads_data_all_minet.csv
+    valid_data: D:\Huawei_datasets\train3\valid_ads_data_all_minet.csv
+    test_data: D:\Huawei_datasets\train3\test_ads_data_all_minet.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [task_id, adv_id, creat_type_cd, adv_prim_id, inter_type_cd, slot_id, site_id,
+                  spread_app_id, hispace_app_tags, app_second_class, app_score],
+           active: True, dtype: float, type: categorical, na_value: 0}
+    label_col: {name: [label,flabel], dtype: float}
+
+amazon_process_users1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\all_data.csv
+    valid_data: D:\amazon_reviews\train1\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train1\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel,y_d], dtype: float,na_value: 0}
+
+amazon_process_users1_emcdr:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_emcdr.csv
+    valid_data: D:\amazon_reviews\train1\val_emcdr.csv
+    test_data: D:\amazon_reviews\train1\test_emcdr.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel,y_d], dtype: float,na_value: 0}
+
+amazon_process_users2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\all_data.csv
+    valid_data: D:\amazon_reviews\train2\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train2\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,y_d], dtype: float}
+
+amazon_process_users3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train3\all_data.csv
+    valid_data: D:\amazon_reviews\train3\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train3\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,y_d], dtype: float}
+
+amazon_process_source_items:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train\all_data.csv
+    valid_data: D:\amazon_reviews\train\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,y_d], dtype: float,na_value: 0}
+
+
+amazon_process_source_items1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\all_data.csv
+    valid_data: D:\amazon_reviews\train1\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train1\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,flabel,y_d], dtype: float}
+
+amazon_process_source_items1_emcdr:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_emcdr.csv
+    valid_data: D:\amazon_reviews\train1\val_emcdr.csv
+    test_data: D:\amazon_reviews\train1\test_emcdr.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,flabel,y_d,], dtype: float,na_value: 0}
+
+amazon_process_source_items2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\all_data.csv
+    valid_data: D:\amazon_reviews\train2\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train2\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+amazon_process_source_items3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train3\all_data.csv
+    valid_data: D:\amazon_reviews\train3\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train3\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,y_d], dtype: float}
+
+amazon_process_target_items:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train\all_data.csv
+    valid_data: D:\amazon_reviews\train\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,y_d], dtype: float}
+
+amazon_process_target_items1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_emcdr.csv
+    valid_data: D:\amazon_reviews\train1\val_emcdr.csv
+    test_data: D:\amazon_reviews\train1\test_emcdr.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel,y_d], dtype: float}
+
+amazon_process_target_items1_emcdr:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_emcdr.csv
+    valid_data: D:\amazon_reviews\train1\val_emcdr.csv
+    test_data: D:\amazon_reviews\train1\test_emcdr.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel,y_d], dtype: float}
+
+amazon_process_target_items2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\all_data.csv
+    valid_data: D:\amazon_reviews\train2\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train2\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel,y_d], dtype: float}
+
+
+
+amazon_process_target_items3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train3\all_data.csv
+    valid_data: D:\amazon_reviews\train3\valid_ads_data_all.csv
+    test_data: D:\amazon_reviews\train3\test_ads_data_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel,y_d], dtype: float}
+
+
+amazon_process_users_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train1\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train1\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+amazon_process_users_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+
+
+amazon_process_users_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - {name: [user_id],
+           active: True, dtype: str, type: categorical, na_value: ''}
+        - { name: [ hist,feeds_hist ],
+            active: True, dtype: str, type: sequence, na_value: "",max_len: 5 }
+    label_col: {name: [label,flabel], dtype: float}
+
+
+
+amazon_process_source_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train1\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train1\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+amazon_process_source_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+
+amazon_process_source_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ feeds_item_id, feeds_category,feeds_brand,feeds_main_cat,feeds_title],
+            active: True, dtype: str, type: categorical, na_value: '' }
+
+    label_col: {name: [label,flabel], dtype: float}
+
+amazon_process_target_items_minet1:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train1\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train1\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train1\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel], dtype: float}
+
+
+
+amazon_process_target_items_minet2:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel], dtype: float}
+
+amazon_process_target_items_minet3:
+    data_root: D:\
+    data_format: csv
+    train_data: D:\amazon_reviews\train2\train_movie_music_all.csv
+    valid_data: D:\amazon_reviews\train2\val_movie_music_all.csv
+    test_data: D:\amazon_reviews\train2\test_movie_music_all.csv
+    min_categr_count: 2
+    feature_cols:
+        - { name: [ item_id, category,brand,main_cat,title ],
+            active: True, dtype: str, type: categorical, na_value: '' }
+    label_col: {name: [label,flabel], dtype: float}
