@@ -6,8 +6,9 @@ pip install -r requirements.txt
 ```
 ## Usage 
 All experiments were conducted on the open source framework Huawei FuxiCTR.
-https://dl.acm.org/doi/epdf/10.1145/3459637.3482486
-https://github.com/xue-pai/Fuxi
+The paper : https://dl.acm.org/doi/epdf/10.1145/3459637.3482486
+
+Code : https://github.com/xue-pai/Fuxi
 
 For training and Evaluating the model :
 ```
