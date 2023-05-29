@@ -1,5 +1,5 @@
 # C2DR
-Implementation of C2DR algorithm based on FuxiCTR open source framework and Huawei competition dataset
+Implementation of some SOTA CDR algorithm based on FuxiCTR open source framework
 ## Environment
 ```
 pip install -r requirements.txt
