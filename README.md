@@ -11,7 +11,7 @@ All experiments were conducted on the open source framework Huawei FuxiCTR.
 
 The paper : https://dl.acm.org/doi/epdf/10.1145/3459637.3482486
 
-Code : https://[github.com/xue-pai/Fuxi](https://github.com/xue-pai/FuxiCTR)
+Code : https://github.com/xue-pai/FuxiCTR
 
 For training and Evaluating the model :
 ```
