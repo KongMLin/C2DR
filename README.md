@@ -1,11 +1,12 @@
 # C2DR
-Implementation of C2DR algorithm based on FuxiCTR open source framework
+Implementation of C2DR algorithm based on FuxiCTR open source framework and Huawei competition dataset
 ## Environment
 ```
 pip install -r requirements.txt
 ```
 ## Usage 
 All experiments were conducted on the open source framework Huawei FuxiCTR.
+
 The paper : https://dl.acm.org/doi/epdf/10.1145/3459637.3482486
 
 Code : https://github.com/xue-pai/Fuxi
